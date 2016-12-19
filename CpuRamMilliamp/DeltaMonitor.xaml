@@ -1,0 +1,166 @@
+﻿<Window x:Class="DeltaMonitor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CpuRamMilliamp"
+        mc:Ignorable="d"
+        Title="Wave" Height="182" Width="463" WindowStyle="None" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" AllowsTransparency="True" Background="{x:Null}" x:Name="window" Icon="pack://siteoforigin:,,,/Resources/MMlogo.png">
+    <Window.Resources>
+        <Storyboard x:Key="OnLoaded1">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="window">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </Window.Resources>
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+            <BeginStoryboard x:Name="OnLoaded1_BeginStoryboard" Storyboard="{StaticResource OnLoaded1}"/>
+        </EventTrigger>
+    </Window.Triggers>
+
+
+
+    <Border ClipToBounds="True" CornerRadius="0,0,10,10" Background="#FF151515" x:Name="brdLogin" BorderBrush="White" BorderThickness="1" >
+        <Canvas Margin="-1,0.332,-1,-0.332">
+            <Canvas x:Name="canvasTop" Height="30" Canvas.Left="4" Width="457" Background="#FF151515">
+                <Label x:Name="label_Copy" Content="DELTA MONITOR" Canvas.Left="114" FontFamily="Resources/#Earth Orbiter Title" FontSize="18.667" Foreground="White" Canvas.Top="1"/>
+            </Canvas>
+            <Border BorderBrush="White" BorderThickness="0,0,0,1" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="200"/>
+            <Border BorderBrush="White" BorderThickness="0,0,0,1" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="200" Canvas.Left="263"/>
+            <Button x:Name="btnClose" Content="✕" Height="18" Canvas.Left="426" Width="33" Background="#FF151515" Foreground="White" Canvas.Top="-1" FontFamily="Verdana" BorderBrush="White" Style="{DynamicResource BtnClose}" ToolTip="Fechar" FontSize="10.667" />
+            <Button x:Name="btnMinimize" Content="_" Height="18" Canvas.Left="403" Width="23" Background="#FF151515" Foreground="White" Canvas.Top="-1" FontFamily="Verdana" BorderBrush="White" FontWeight="Bold" Style="{DynamicResource BtnMinimize}" ToolTip="Minimizar" />
+
+            <Canvas x:Name="cnvsDeviceStatus" Height="43" Width="51" RenderTransformOrigin="0.496,0.472" Canvas.Left="407" Canvas.Top="130" ToolTip="Dispositivo Desconectado">
+                <Label Content="&#xF108;" FontFamily="/CpuRamMilliamp;component/Resources/#FontAwesome" Foreground="White" FontSize="32" Canvas.Left="-4.5" />
+                <Label x:Name="lblDeviceStatus" Content="&#xF021;" FontFamily="FontAwesome" Foreground="White" FontSize="13.333" Canvas.Left="28.5" Canvas.Top="22.5" />
+
+            </Canvas>
+
+            <Border BorderBrush="White" BorderThickness="0,0,0,1" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="461" Canvas.Top="93">
+                <Path Data="M712.5,10.668" Fill="White" HorizontalAlignment="Right" Height="1" Margin="0,10.668,197,0" Stretch="Fill" Stroke="White" VerticalAlignment="Top" Width="1"/>
+            </Border>
+            <Canvas x:Name="cnvsButtonsLogo" Height="268" Width="70" Canvas.Left="218" Canvas.Top="99" Visibility="Hidden">
+                <Canvas x:Name="btnSTATIC" Height="50" Width="50" Canvas.Left="11" Canvas.Top="17">
+
+                    <Ellipse Height="50" Stroke="White" Canvas.Top="-0.332" Width="50" Fill="#FF151515"/>
+                    <TextBlock  Canvas.Left="6" TextWrapping="Wrap" Text="STATIC" Canvas.Top="19.668" Foreground="White" FontFamily="Earth Orbiter" FontSize="9.333"/>
+
+                </Canvas>
+                <Canvas x:Name="btnWAVE" Height="53" Width="54" Canvas.Left="9" Canvas.Top="115">
+
+                    <Ellipse Height="50" Canvas.Left="2" Stroke="White" Canvas.Top="-0.332" Width="50" Fill="#FF151515"/>
+                    <TextBlock Canvas.Left="13" TextWrapping="Wrap" Text="WAVE" Canvas.Top="20.668" Foreground="White" FontFamily="Earth Orbiter" FontSize="9.333"/>
+
+                </Canvas>
+
+                <Canvas x:Name="btnPULSE" Height="53" Width="54" Canvas.Left="9" Canvas.Top="208">
+
+                    <Ellipse Height="50" Canvas.Left="2" Stroke="White" Canvas.Top="-0.332" Width="50" Fill="#FF151515"/>
+                    <TextBlock Canvas.Left="12" TextWrapping="Wrap" Text="PULSe" Canvas.Top="20.668" Foreground="White" FontFamily="Earth Orbiter" FontSize="9.333"/>
+
+                </Canvas>
+
+            </Canvas>
+            <Canvas x:Name="cnvsLogoTip" Height="117.506" Canvas.Left="123.333" Canvas.Top="292.668" Width="242.667" Visibility="Hidden">
+                <Ellipse Fill="#FFF4F4F5" Height="7" Canvas.Left="235.667" Width="7"/>
+                <Path Data="M363,296.668 L219.21544,296.668" Fill="White" Height="1" Canvas.Left="171.882" Stretch="Fill" Stroke="White" Canvas.Top="3" Width="65.785"/>
+                <Path Data="M296.25,295.918 L296.25,402.94895" Fill="White" Height="108.031" Canvas.Left="172.417" Stretch="Fill" Stroke="White" Canvas.Top="3.25" Width="1"/>
+                <Path Data="M295.5,402.668 L56.397513,402.668" Fill="White" Height="1" Canvas.Left="53.732" Stretch="Fill" Stroke="White" Canvas.Top="110" Width="119.435"/>
+                <TextBlock  TextWrapping="Wrap" Text="LOGO" Canvas.Top="101.666" Foreground="White" FontFamily="Earth Orbiter" FontSize="16"/>
+            </Canvas>
+            <Canvas x:Name="cnvsTopTip" Height="208.506" Canvas.Left="403.333" Canvas.Top="45.668" Width="405.667" Visibility="Hidden">
+                <Ellipse Fill="#FFF4F4F5" Height="7" Canvas.Left="48.667" Width="7" Canvas.Top="107"/>
+                <Path Data="M363,296.668 L219.21544,296.668" Fill="White" Height="2.352" Canvas.Left="195.84" Stretch="Fill" Stroke="White" Canvas.Top="56.49" Width="154.785"/>
+                <Path Data="M320.604,405.59618 L320.604,512.62713" Fill="White" Height="53.802" Canvas.Left="195.667" Stretch="Fill" Stroke="White" Canvas.Top="56.698" Width="1" RenderTransformOrigin="0.5,0.5">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="-1"/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Path Data="M295.5,402.668 L56.397513,402.668" Fill="White" Height="1" Canvas.Left="53.732" Stretch="Fill" Stroke="White" Canvas.Top="110" Width="143.435"/>
+                <TextBlock  TextWrapping="Wrap" Text="TOP" Canvas.Top="49.666" Foreground="White" FontFamily="Earth Orbiter" FontSize="16" Canvas.Left="354.495"/>
+            </Canvas>
+            <Canvas x:Name="cnvsButtonsTop" Height="268" Width="70" Canvas.Left="603" Canvas.Top="99" Visibility="Hidden">
+                <Canvas x:Name="btnSTATICTop" Height="50" Width="50" Canvas.Left="11" Canvas.Top="17">
+
+                    <Ellipse Height="50" Stroke="White" Canvas.Top="-0.332" Width="50" Fill="#FF151515"/>
+                    <TextBlock  Canvas.Left="6" TextWrapping="Wrap" Text="STATIC" Canvas.Top="19.668" Foreground="White" FontFamily="Earth Orbiter" FontSize="9.333"/>
+
+                </Canvas>
+                <Canvas x:Name="btnWAVETop" Height="53" Width="54" Canvas.Left="9" Canvas.Top="115">
+
+                    <Ellipse Height="50" Canvas.Left="2" Stroke="White" Canvas.Top="-0.332" Width="50" Fill="#FF151515"/>
+                    <TextBlock Canvas.Left="13" TextWrapping="Wrap" Text="WAVE" Canvas.Top="20.668" Foreground="White" FontFamily="Earth Orbiter" FontSize="9.333"/>
+
+                </Canvas>
+
+                <Canvas x:Name="btnPULSETop" Height="53" Width="54" Canvas.Left="9" Canvas.Top="208">
+
+                    <Ellipse Height="50" Canvas.Left="2" Stroke="White" Canvas.Top="-0.332" Width="50" Fill="#FF151515"/>
+                    <TextBlock Canvas.Left="12" TextWrapping="Wrap" Text="PULSe" Canvas.Top="20.668" Foreground="White" FontFamily="Earth Orbiter" FontSize="9.333"/>
+
+                </Canvas>
+
+            </Canvas>
+            <Image x:Name="image1" Height="52" Canvas.Left="204" Canvas.Top="127" Width="52" Source="pack://siteoforigin:,,,/Resources/MMlogo.png"/>
+            <Button x:Name="btnSincro" Canvas.Left="436"  Canvas.Top="380.668" FontFamily="FontAwesome" Foreground="White" FontSize="32" Content="&#xF079;" Background="{x:Null}" BorderBrush="{x:Null}" Visibility="Hidden"/>
+            <TextBlock x:Name="lblCPUUsage" Canvas.Left="86" Canvas.Top="94" Foreground="White" FontFamily="Resources/#Earth Orbiter Title" Width="65" Background="{x:Null}"  TextAlignment="Center" />
+            <TextBlock x:Name="lblRAMUsage" Canvas.Left="318" Canvas.Top="94" Foreground="White" FontFamily="Resources/#Earth Orbiter Title" Width="65" Background="{x:Null}"  TextAlignment="Center" />
+
+            <Canvas Height="41" Width="41" RenderTransformOrigin="0.516,0.569" Canvas.Left="97" Canvas.Top="47">
+                <Rectangle Canvas.Left="7" Canvas.Top="7" Width="28" Height="27" Fill="White"/>
+                <Rectangle Canvas.Left="12" Width="2" Height="5" Fill="White" Canvas.Top="1"/>
+                <Rectangle Canvas.Left="16" Width="2" Height="5" Fill="White" Canvas.Top="1"/>
+                <Rectangle Canvas.Left="18" Width="2" Height="5" Fill="White" Canvas.Top="1"/>
+                <Rectangle Canvas.Left="22" Width="2" Height="5" Fill="White" Canvas.Top="1"/>
+                <Rectangle Canvas.Left="26" Width="2" Height="5" Fill="White" Canvas.Top="1"/>
+                <Rectangle Canvas.Left="30" Width="2" Height="5" Fill="White" Canvas.Top="1"/>
+                <Rectangle Canvas.Left="32" Width="2" Height="5" Fill="White" Canvas.Top="1"/>
+                <Rectangle Canvas.Left="8" Width="2" Height="5" Fill="White" Canvas.Top="1"/>
+                <Rectangle Canvas.Left="12" Canvas.Top="35" Width="2" Height="5" Fill="White"/>
+                <Rectangle Canvas.Left="16" Canvas.Top="35" Width="2" Height="5" Fill="White"/>
+                <Rectangle Canvas.Left="18" Canvas.Top="35" Width="2" Height="5" Fill="White"/>
+                <Rectangle Canvas.Left="22" Canvas.Top="35" Width="2" Height="5" Fill="White"/>
+                <Rectangle Canvas.Left="26" Canvas.Top="35" Width="2" Height="5" Fill="White"/>
+                <Rectangle Canvas.Left="30" Canvas.Top="35" Width="2" Height="5" Fill="White"/>
+                <Rectangle Canvas.Left="32" Canvas.Top="35" Width="2" Height="5" Fill="White"/>
+                <Rectangle Canvas.Left="8" Canvas.Top="35" Width="2" Height="5" Fill="White"/>
+                <Rectangle Canvas.Top="7" Width="6" Height="2" Fill="White"/>
+                <Rectangle Canvas.Top="11" Width="6" Height="1" Fill="White"/>
+                <Rectangle Canvas.Top="14" Width="6" Height="2" Fill="White"/>
+                <Rectangle Canvas.Top="18" Width="6" Height="2" Fill="White"/>
+                <Rectangle Canvas.Top="22" Width="6" Height="2" Fill="White"/>
+                <Rectangle Canvas.Top="26" Width="6" Height="2" Fill="White"/>
+                <Rectangle Canvas.Top="30" Width="6" Height="2" Fill="White"/>
+                <Rectangle Canvas.Top="33" Width="6" Height="2" Fill="White"/>
+                <Rectangle Canvas.Left="36" Canvas.Top="7" Width="6" Height="2" Fill="White"/>
+                <Rectangle Canvas.Left="36" Canvas.Top="11" Width="6" Height="1" Fill="White"/>
+                <Rectangle Canvas.Left="36" Canvas.Top="14" Width="6" Height="2" Fill="White"/>
+                <Rectangle Canvas.Left="36" Canvas.Top="18" Width="6" Height="2" Fill="White"/>
+                <Rectangle Canvas.Left="36" Canvas.Top="22" Width="6" Height="2" Fill="White"/>
+                <Rectangle Canvas.Left="36" Canvas.Top="26" Width="6" Height="2" Fill="White"/>
+                <Rectangle Canvas.Left="36" Canvas.Top="30" Width="6" Height="2" Fill="White"/>
+                <Rectangle Canvas.Left="36" Canvas.Top="33" Width="6" Height="2" Fill="White"/>
+            </Canvas>
+            <Canvas Height="33" Width="68" RenderTransformOrigin="0.577,0.582" Canvas.Left="317" Canvas.Top="54">
+                <Path x:Name="memoryStruct" Fill="White"  Data="M442.5,60.8c0-27,29.2-29.2,29.2-29.2V17.9c0,0-4.5-17.9-17.9-17.9C440.4,0,19.2,0,19.2,0S0,3.8,0,19.2v13.2
+	c0,0,29.6,1.4,29.6,29.6c0,28.2-29.4,29.4-29.4,29.4v99.8c0,0,3.5,20.9,20.9,20.9s31.1,0,31.1,0s0.6-29.2,29.2-29.2
+	s28.4,28.8,28.4,28.8h344.7c0,0,18.1-4.5,18.1-18.1c0-13.6,0-102.6,0-102.6S442.5,87.8,442.5,60.8z M134.9,142.4c0,3.8-3.2,7-7,7
+	H80.3c-3.9,0-7-3.2-7-7V52c0-3.8,3.1-7,7-7h47.7c3.8,0,7,3.2,7,7V142.4z M221.9,142.4c0,3.8-3.2,7-7,7h-47.7c-3.9,0-7-3.2-7-7V52
+	c0-3.8,3.1-7,7-7h47.7c3.8,0,7,3.2,7,7V142.4z M307.6,142.4c0,3.8-3.1,7-7,7h-47.7c-3.8,0-7-3.2-7-7V52c0-3.8,3.2-7,7-7h47.7
+	c3.9,0,7,3.2,7,7V142.4z M393.6,142.4c0,3.8-3.1,7-7,7h-47.7c-3.8,0-7-3.2-7-7V52c0-3.8,3.2-7,7-7h47.7c3.9,0,7,3.2,7,7V142.4z" Stretch="Fill" Canvas.Top="1.9" Height="30.1" Width="67.07" />
+            </Canvas>
+
+        </Canvas>
+
+
+
+
+    </Border>
+</Window>
