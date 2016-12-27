@@ -24,10 +24,7 @@ Class DeltaMonitor
         Dim value As String
 
         value = regStartUp.GetValue("CPURAMMetter")
-        '  MsgBox(My.Application.Info.DirectoryPath)
         regStartUp.SetValue("Metter", System.Reflection.Assembly.GetExecutingAssembly().Location)
-        '   regStartUp.SetValue("My ApplicationStartUpDemo", "\"" + System.Reflection.Assembly.GetExecutingAssembly().Location + " \ "")
-
 
         Dim m_ico As Icon = System.Drawing.Icon.FromHandle((My.Resources.MMlogo.GetHicon))
         notifyIcon.Icon = m_ico
@@ -37,7 +34,7 @@ Class DeltaMonitor
         AddHandler notifyIcon.DoubleClick, AddressOf notfyClick
         ''AddHandler notifyIcon.Click, AddressOf notifyTip
         dispatcherTimer.Interval = New TimeSpan(0, 0, 0.55)
-        dispatcherTimerVideoCheck.Interval = New TimeSpan(0, 0, 1)
+        dispatcherTimerVideoCheck.Interval = New TimeSpan(0, 15, 0)
         dispatcherTimer.Start()
         dispatcherTimerVideoCheck.Start()
         notifyIcon.BalloonTipText = "CPU: " & lblCPUUsage.Text & "  RAM: " & lblRAMUsage.Text
@@ -48,7 +45,7 @@ Class DeltaMonitor
 
     Public Sub ytVerification()
         If conection.conectedVerif Then
-            If ytCheck.isLatestVideoANewVideo Then
+            If ytCheck.isLatestVideoLiked Then
                 conection.write("@")
             Else
                 conection.write("!")
@@ -113,8 +110,4 @@ Class DeltaMonitor
         Me.WindowState = WindowState.Minimized
     End Sub
 
-    Private Sub image1_MouseLeftButtonDown(sender As Object, e As MouseButtonEventArgs) Handles image1.MouseLeftButtonDown
-        Dim frmUser As New FrmUserName
-        frmUser.ShowDialog()
-    End Sub
 End Class
