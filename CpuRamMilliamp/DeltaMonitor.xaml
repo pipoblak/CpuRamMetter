@@ -34,7 +34,7 @@
 
             <Canvas x:Name="cnvsDeviceStatus" Height="43" Width="51" RenderTransformOrigin="0.496,0.472" Canvas.Left="407" Canvas.Top="130" ToolTip="Dispositivo Desconectado">
                 <Label Content="&#xF108;" FontFamily="/CpuRamMilliamp;component/Resources/#FontAwesome" Foreground="White" FontSize="32" Canvas.Left="-4.5" />
-                <Label x:Name="lblDeviceStatus" Content="&#xF021;" FontFamily="FontAwesome" Foreground="White" FontSize="13.333" Canvas.Left="28.5" Canvas.Top="22.5" />
+                <Label x:Name="lblDeviceStatus" Content="&#xF021;" FontFamily="/CpuRamMilliamp;component/Resources/#FontAwesome" Foreground="White" FontSize="13.333" Canvas.Left="28.5" Canvas.Top="22.5" />
 
             </Canvas>
 
@@ -110,8 +110,8 @@
             </Canvas>
             <Image x:Name="image1" Height="52" Canvas.Left="204" Canvas.Top="127" Width="52" Source="pack://siteoforigin:,,,/Resources/MMlogo.png"/>
             <Button x:Name="btnSincro" Canvas.Left="436"  Canvas.Top="380.668" FontFamily="FontAwesome" Foreground="White" FontSize="32" Content="&#xF079;" Background="{x:Null}" BorderBrush="{x:Null}" Visibility="Hidden"/>
-            <TextBlock x:Name="lblCPUUsage" Canvas.Left="86" Canvas.Top="94" Foreground="White" FontFamily="Resources/#Earth Orbiter Title" Width="65" Background="{x:Null}"  TextAlignment="Center" />
-            <TextBlock x:Name="lblRAMUsage" Canvas.Left="318" Canvas.Top="94" Foreground="White" FontFamily="Resources/#Earth Orbiter Title" Width="65" Background="{x:Null}"  TextAlignment="Center" />
+            <TextBlock x:Name="lblCPUUsage" Canvas.Left="86" Canvas.Top="94" Foreground="White" FontFamily="/CpuRamMilliamp;component/Resources/#Earth Orbiter Title" Width="65" Background="{x:Null}"  TextAlignment="Center" />
+            <TextBlock x:Name="lblRAMUsage" Canvas.Left="318" Canvas.Top="94" Foreground="White" FontFamily="/CpuRamMilliamp;component/Resources/#Earth Orbiter Title" Width="65" Background="{x:Null}"  TextAlignment="Center" />
 
             <Canvas Height="41" Width="41" RenderTransformOrigin="0.516,0.569" Canvas.Left="97" Canvas.Top="47">
                 <Rectangle Canvas.Left="7" Canvas.Top="7" Width="28" Height="27" Fill="White"/>

@@ -100,6 +100,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DbHelper.vb" />
+    <Compile Include="FrmUserName.xaml.vb">
+      <DependentUpon>FrmUserName.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SerialConn.vb" />
     <Compile Include="YoutubeNewVideoCheck.vb" />
     <Page Include="DeltaMonitor.xaml">
@@ -114,6 +118,10 @@
       <DependentUpon>DeltaMonitor.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="FrmUserName.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Simple Styles.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

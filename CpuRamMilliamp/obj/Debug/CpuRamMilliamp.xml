@@ -6,6 +6,16 @@ CpuRamMilliamp
 </name>
 </assembly>
 <members>
+<member name="T:CpuRamMilliamp.FrmUserName">
+<summary>
+FrmUserName
+</summary>
+</member>
+<member name="M:CpuRamMilliamp.FrmUserName.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
 <member name="T:CpuRamMilliamp.Application">
 <summary>
 Application

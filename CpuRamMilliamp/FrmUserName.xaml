@@ -1,0 +1,14 @@
+﻿<Window x:Class="FrmUserName"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CpuRamMilliamp"
+        mc:Ignorable="d"
+        Title="Usuário do Youtube" Height="71.143" Width="225.126" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="ToolWindow">
+    <Canvas >
+        <TextBox x:Name="txtUsername" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="119" TextAlignment="Center" Margin="5,5,0,-26" Height="21"/>
+        <Button x:Name="button" Content="Aplicar" HorizontalAlignment="Left" Margin="128,5,0,-26" VerticalAlignment="Top" Width="77" Height="21"/>
+
+    </Canvas>
+</Window>

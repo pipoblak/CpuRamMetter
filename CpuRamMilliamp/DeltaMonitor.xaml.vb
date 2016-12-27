@@ -37,7 +37,7 @@ Class DeltaMonitor
         AddHandler notifyIcon.DoubleClick, AddressOf notfyClick
         ''AddHandler notifyIcon.Click, AddressOf notifyTip
         dispatcherTimer.Interval = New TimeSpan(0, 0, 0.55)
-        dispatcherTimerVideoCheck.Interval = New TimeSpan(0, 0, 3)
+        dispatcherTimerVideoCheck.Interval = New TimeSpan(0, 0, 1)
         dispatcherTimer.Start()
         dispatcherTimerVideoCheck.Start()
         notifyIcon.BalloonTipText = "CPU: " & lblCPUUsage.Text & "  RAM: " & lblRAMUsage.Text
@@ -50,9 +50,10 @@ Class DeltaMonitor
         If conection.conectedVerif Then
             If ytCheck.isLatestVideoANewVideo Then
                 conection.write("@")
+            Else
+                conection.write("!")
             End If
         End If
-
     End Sub
     Public Sub notfyClick(sender As Object, e As System.Windows.Forms.MouseEventArgs)
         If e.Button = Forms.MouseButtons.Left Then
@@ -113,6 +114,7 @@ Class DeltaMonitor
     End Sub
 
     Private Sub image1_MouseLeftButtonDown(sender As Object, e As MouseButtonEventArgs) Handles image1.MouseLeftButtonDown
-        conection.write("@")
+        Dim frmUser As New FrmUserName
+        frmUser.ShowDialog()
     End Sub
 End Class
