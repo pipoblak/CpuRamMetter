@@ -24,13 +24,10 @@ Class DeltaMonitor
         Dim value As String
 
         value = regStartUp.GetValue("CPURAMMetter")
+        '  MsgBox(My.Application.Info.DirectoryPath)
+        regStartUp.SetValue("Metter", System.Reflection.Assembly.GetExecutingAssembly().Location)
+        '   regStartUp.SetValue("My ApplicationStartUpDemo", "\"" + System.Reflection.Assembly.GetExecutingAssembly().Location + " \ "")
 
-        If value <> My.Application.StartupUri.ToString() Then
-
-            regStartUp.CreateSubKey("CPURAMMetter")
-            regStartUp.SetValue("CPURAMMetter", My.Application.StartupUri.ToString())
-
-        End If
 
         Dim m_ico As Icon = System.Drawing.Icon.FromHandle((My.Resources.MMlogo.GetHicon))
         notifyIcon.Icon = m_ico
@@ -113,5 +110,9 @@ Class DeltaMonitor
 
     Private Sub btnMinimize_Click(sender As Object, e As RoutedEventArgs) Handles btnMinimize.Click
         Me.WindowState = WindowState.Minimized
+    End Sub
+
+    Private Sub image1_MouseLeftButtonDown(sender As Object, e As MouseButtonEventArgs) Handles image1.MouseLeftButtonDown
+        conection.write("@")
     End Sub
 End Class

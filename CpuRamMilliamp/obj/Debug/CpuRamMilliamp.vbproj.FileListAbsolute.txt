@@ -31,3 +31,36 @@ C:\Users\pipob\Documents\Visual Studio 2015\Projects\CpuRamMilliamp\CpuRamMillia
 C:\Users\pipob\Documents\Visual Studio 2015\Projects\CpuRamMilliamp\CpuRamMilliamp\bin\Debug\EntityFramework.xml
 C:\Users\pipob\Documents\Visual Studio 2015\Projects\CpuRamMilliamp\CpuRamMilliamp\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\pipob\Documents\Visual Studio 2015\Projects\CpuRamMilliamp\CpuRamMilliamp\bin\Debug\System.Data.SQLite.xml
+C:\Users\pipob\Desktop\CpuRamMilliamp\CpuRamMilliamp\bin\Debug\CpuRamMilliamp.exe.config
+C:\Users\pipob\Desktop\CpuRamMilliamp\CpuRamMilliamp\obj\Debug\CpuRamMilliamp.exe
+C:\Users\pipob\Desktop\CpuRamMilliamp\CpuRamMilliamp\obj\Debug\CpuRamMilliamp.xml
+C:\Users\pipob\Desktop\CpuRamMilliamp\CpuRamMilliamp\obj\Debug\CpuRamMilliamp.pdb
+C:\Users\pipob\Desktop\CpuRamMilliamp\CpuRamMilliamp\bin\Debug\Resources\earthorbitertitle.ttf
+C:\Users\pipob\Desktop\CpuRamMilliamp\CpuRamMilliamp\bin\Debug\Resources\earthorbitertitleital.ttf
+C:\Users\pipob\Desktop\CpuRamMilliamp\CpuRamMilliamp\bin\Debug\Resources\FontAwesome.otf
+C:\Users\pipob\Desktop\CpuRamMilliamp\CpuRamMilliamp\bin\Debug\Resources\MMlogo.png
+C:\Users\pipob\Desktop\CpuRamMilliamp\CpuRamMilliamp\bin\Debug\CpuRamMilliamp.exe
+C:\Users\pipob\Desktop\CpuRamMilliamp\CpuRamMilliamp\bin\Debug\CpuRamMilliamp.pdb
+C:\Users\pipob\Desktop\CpuRamMilliamp\CpuRamMilliamp\bin\Debug\CpuRamMilliamp.xml
+C:\Users\pipob\Desktop\CpuRamMilliamp\CpuRamMilliamp\bin\Debug\EntityFramework.dll
+C:\Users\pipob\Desktop\CpuRamMilliamp\CpuRamMilliamp\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\pipob\Desktop\CpuRamMilliamp\CpuRamMilliamp\bin\Debug\Newtonsoft.Json.dll
+C:\Users\pipob\Desktop\CpuRamMilliamp\CpuRamMilliamp\bin\Debug\System.Data.SQLite.dll
+C:\Users\pipob\Desktop\CpuRamMilliamp\CpuRamMilliamp\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\pipob\Desktop\CpuRamMilliamp\CpuRamMilliamp\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\pipob\Desktop\CpuRamMilliamp\CpuRamMilliamp\bin\Debug\EntityFramework.xml
+C:\Users\pipob\Desktop\CpuRamMilliamp\CpuRamMilliamp\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\pipob\Desktop\CpuRamMilliamp\CpuRamMilliamp\bin\Debug\Newtonsoft.Json.xml
+C:\Users\pipob\Desktop\CpuRamMilliamp\CpuRamMilliamp\bin\Debug\System.Data.SQLite.xml
+C:\Users\pipob\Desktop\CpuRamMilliamp\CpuRamMilliamp\obj\Debug\CpuRamMilliamp.vbprojResolveAssemblyReference.cache
+C:\Users\pipob\Desktop\CpuRamMilliamp\CpuRamMilliamp\obj\Debug\Simple Styles.baml
+C:\Users\pipob\Desktop\CpuRamMilliamp\CpuRamMilliamp\obj\Debug\DeltaMonitor.g.vb
+C:\Users\pipob\Desktop\CpuRamMilliamp\CpuRamMilliamp\obj\Debug\Application.g.vb
+C:\Users\pipob\Desktop\CpuRamMilliamp\CpuRamMilliamp\obj\Debug\CpuRamMilliamp_Content.g.vb
+C:\Users\pipob\Desktop\CpuRamMilliamp\CpuRamMilliamp\obj\Debug\CpuRamMilliamp_MarkupCompile.cache
+C:\Users\pipob\Desktop\CpuRamMilliamp\CpuRamMilliamp\obj\Debug\CpuRamMilliamp_MarkupCompile.lref
+C:\Users\pipob\Desktop\CpuRamMilliamp\CpuRamMilliamp\obj\Debug\Application.baml
+C:\Users\pipob\Desktop\CpuRamMilliamp\CpuRamMilliamp\obj\Debug\DeltaMonitor.baml
+C:\Users\pipob\Desktop\CpuRamMilliamp\CpuRamMilliamp\obj\Debug\CpuRamMilliamp.g.resources
+C:\Users\pipob\Desktop\CpuRamMilliamp\CpuRamMilliamp\obj\Debug\CpuRamMilliamp.Resources.resources
+C:\Users\pipob\Desktop\CpuRamMilliamp\CpuRamMilliamp\obj\Debug\CpuRamMilliamp.vbproj.GenerateResource.Cache
